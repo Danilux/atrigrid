@@ -1,0 +1,81 @@
+
+* { margin: 0; padding: 0;}
+
+.grids {
+	max-width: 1280px;	/* Limit the container width */
+/*	margin: 0 1.51515% 0;*/ /* Allows even padding on the edges */
+	list-style: none;	/* Allows to use <ul> to build grids */
+	margin: 0; padding: 0;	/* Remove any inherited margin or padding that could break the grid */ 
+}
+
+
+/* Styles to Display the Demo, Remove at will */
+.show-grid { background-color: gray; }
+.show-grid [class^=m] {
+	min-height: 100px; 
+	background-color: yellow;
+	margin: 0 0 2em;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+/* Clearfix the grids container to avoid collapsing */
+.grids:before, .grids:after { content:""; display:table; }
+.grids:after { clear:both; }
+.grids { zoom:1; }
+
+
+.grids > [class^=m] { 
+	float: left;
+	margin: 0 1.51515% 2em;
+}
+
+@media screen and (min-width: 0) and (max-width: 468px) {
+[class^=m1-] { width: 13.6364%; }
+[class^=m2-] { width: 30.30303333333333%; }
+[class^=m3-] { width: 46.9697%; }
+[class^=m4-] { width: 63.63636666666667%;}
+[class^=m5-] { width: 80.303%; }
+[class^=m6-] { width: 96.9697%; }
+}
+
+@media screen and (min-width: 469px) and (max-width: 768px) {
+[class*=t1] { width: 13.6364%; }
+[class*=t2] { width: 30.30303333333333%; }
+[class*=t3] { width: 46.9697%; }
+[class*=t4] { width: 63.63636666666667%; }
+[class*=t5] { width: 80.303%; }
+[class*=t6] { width: 96.9697%; }
+}
+
+@media screen and (min-width: 769px) {
+[class$=d1] { width: 13.6364%; }
+[class$=d2] { width: 30.30303333333333%;}
+[class$=d3] { width: 46.9697%; }
+[class$=d4] { width: 63.63636666666667%; }
+[class$=d5] { width: 80.303%; }
+[class$=d6] { width: 96.9697%; }
+}
+
+
+
+/* 1 unidad de 6 col que son el 100%, 6col*2marg = 12 margenes, 12*1.51515 = 18.1818 - 100% = 81.8182 / 6 = 13.63636666666667 */
+/*.grid-one-sixth { width: 13.6364%; }*/
+
+/* 2 unidades de 6 col, 2*3 =6, 3col, 3*2 = 6 margenes, 6*1.51515= 9.0909 - 100% = 90.9091 / 3 = 30.30303333333333% */
+/*.grid-two-sixth { width: 30.30303333333333%;}*/
+
+/* 3 unidades de 6 col, 3*2=6, 2col, 2*2= 4 margenes, 4*1.51515 = 6.0606 - 100% = 93.9394% / 2 = 46.9697% */
+/*.grid-three-sixth { width: 46.9697%;}*/
+
+/* 1 unidad de 4 col, 4 margenes * 1.51515 = 6.0606%, 1 col de 2 restante =  30.30303333333333% + 6.0606% = 36,36363333333333 - 100% =  63.63636666666667 */
+/*.grid-four-sixth { width: 63.63636666666667%;}*/
+
+/* 1 unidad de 5 col, 4 margenes = 6.0606% 1 col de 1 restante =  13.6364% +  6.0606marg = 19.697 - 100 = 80.303% */
+/*.grid-five-sixth { width: 80.303%;}*/
+
+/* Full width 1 col por ende 2 margenes izquierda y derecha suman 3.0303 - 100% = 96.9697 */
+/*.grid-full { width: 96.9697%; }*/
+
+}
