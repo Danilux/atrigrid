@@ -17,7 +17,7 @@
 .grid {
 	list-style: none;				/*[1] Allows to use <ul> to build grids */
 	margin: 0 0 0 -1.51515%;		/*[2] Remove any inherited margin and negates one gutter */
-	zoom:1; 						/*[3] Clear the floated child to avoid parent collapsing with Sass */
+	zoom:1; 						/*[3] Clear the floated child to avoid parent collapsing */
 }
 
 /* Clearfix the grids container to avoid collapsing */
