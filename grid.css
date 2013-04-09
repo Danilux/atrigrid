@@ -9,9 +9,9 @@
 
 /* This wrapper class is optional, useful if you need a specific width centered layout */
 .grid-wrapper {
-	max-width: 1100px;			/*[1] Sets a fixed expanding width limit for the layout */
-	width: 95%;					/*[2] Sets a proportional width for fluid and 5% for side spacing */
-	margin: 0 auto;				/*[3] Centers the grid */
+	max-width: 68.75em;	/*1100px*/	/*[1] Sets a fixed expanding width limit for the layout */
+	width: 95%;						/*[2] Sets a proportional width for fluid and 5% for side spacing */
+	margin: 0 auto;					/*[3] Centers the grid */
 }
 
 .grid {
@@ -30,7 +30,7 @@
 	margin: 0 0 0 1.51515%;		/*[2] Sets horizontal margins as gutters to separate columns */
 } 
 
-@media screen and (min-width: 0) and (max-width: 499px) {
+@media screen and (min-width: 0) and (max-width: 31.1875em) {  /* max 499px */
 	.grid [class^=m1] { width: 15.15151666666667%; }
 	.grid [class^=m2] { width: 31.81818333333333%; }
 	.grid [class^=m3] { width: 48.48485%; }
@@ -39,7 +39,7 @@
 	.grid [class^=m6] { width: 98.48485%; }
 }
 
-@media screen and (min-width: 500px) and (max-width: 991px) {
+@media screen and (min-width: 31.25em) and (max-width: 61.9375em) { /* min 500px & max 991px */
 	.grid [class*=t1] { width: 15.15151666666667%; }
 	.grid [class*=t2] { width: 31.81818333333333%; }
 	.grid [class*=t3] { width: 48.48485%; }
@@ -48,7 +48,7 @@
 	.grid [class*=t6] { width: 98.48485%; }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 62em) { /* min 992px */
 	.grid [class*=d1] { width: 15.15151666666667%; }
 	.grid [class*=d2] { width: 31.81818333333333%; }
 	.grid [class*=d3] { width: 48.48485%; }
